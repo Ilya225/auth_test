@@ -1,0 +1,44 @@
+server:
+  port: 9700
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/auth
+    username: username
+    password: password
+#    driver-class-name: org.postgresql.Driver
+  jpa:
+    generate-ddl: true
+    hibernate.ddl-auto: none
+  # Email
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: username
+    password: password
+    properties.mail.smtp.auth: true
+    properties.mail.smtp.starttls.enable: true
+  flyway:
+    enabled: true
+    user: username
+    password: password
+
+
+logging:
+  level:
+    root: INFO
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+#security:
+#  oauth2:
+#    client:
+#      client-id: "client"
+#      client-secret: "secret"
+#      scope:
+#        - "all"
