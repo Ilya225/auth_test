@@ -7,5 +7,5 @@ docker-compose up -d
 
 ### start app
 ```
-./gradle bootRun
+./gradlew bootRun
 ```
